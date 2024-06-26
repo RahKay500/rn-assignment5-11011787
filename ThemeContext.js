@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+    import React, { createContext, useState, useContext, useMemo } from 'react';
 
     const ThemeContext = createContext();
 
@@ -9,8 +9,10 @@ import React, { createContext, useState, useContext } from 'react';
         setIsDarkTheme(!isDarkTheme);
     };
 
+    const value = useMemo(() => ({ isDarkTheme, toggleTheme }), [isDarkTheme, toggleTheme]);
+
     return (
-        <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+        <ThemeContext.Provider value={value}>
         {children}
         </ThemeContext.Provider>
     );

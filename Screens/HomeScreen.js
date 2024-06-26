@@ -58,7 +58,7 @@
         </View>
         <View style={styles.transactionsContainer}>
             <Text style={styles.transactionText}>Transaction</Text>
-            <Text style={{ color: 'blue' }}>Sell All</Text>
+            <Text style={{ color: '#0066FF' }}>Sell All</Text>
         </View>
         <FlatList
             data={transactions}
@@ -76,7 +76,7 @@
                 </View>
                 <Text style={[ 
                 styles.transactionAmount, 
-                { color: item.amount.includes('$300') ? 'blue' : (isDarkTheme ? 'white' : 'black') }]}>
+                { color: item.amount.includes('$300') ? '#0066FF' : (isDarkTheme ? 'white' : 'black') }]}>
                 {item.amount}
                 </Text>
             </View>
