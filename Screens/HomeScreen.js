@@ -76,7 +76,7 @@
                 </View>
                 <Text style={[ 
                 styles.transactionAmount, 
-                { color: item.amount.includes('$300') ? '#0066FF' : (isDarkTheme ? 'white' : 'black') }]}>
+                { color: item.amount.includes('$300') ? '#0066FF' : { tintColor: isDarkTheme ? 'white' : 'black'} }]}>
                 {item.amount}
                 </Text>
             </View>
